@@ -1,0 +1,17 @@
+.NavBar{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+}
+
+
+.NavBar img{
+    width: 240px;
+}
+
+.NavBar-SearchBar{
+    position: absolute;
+    top: 5px;
+    left: 50%;
+}
