@@ -3,15 +3,18 @@
     flex-direction: row;
     position: relative;
     justify-content: space-between;
+    padding: 20px;
 }
 
 
 .NavBar img{
-    width: 240px;
+    width: 140px;
 }
 
 .NavBar-SearchBar{
     position: absolute;
-    top: 5px;
-    left: 50%;
+    top: 0;
+    left: 30%;
+    right: 0;
+    bottom: 0;
 }

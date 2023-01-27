@@ -1,0 +1,8 @@
+.EntryList{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    border-radius: 8px;
+    
+}

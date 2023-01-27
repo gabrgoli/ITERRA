@@ -1,0 +1,40 @@
+.SearchBar{
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+    
+}
+
+.SearchBar > div{
+    position: relative;
+    display: flex;
+
+}
+
+.SearchBar > div > svg{
+    position: absolute;
+    top: 10px;
+    left: 13px;
+    
+}
+
+.SearchBar input{
+    border-radius: 20px;
+    padding: 8px 30px;
+    min-width: 300px;
+    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+
+}
+
+.SearchBar button{
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 2.5px;
+    border-radius: 50%;
+    background: rgb(13, 114, 82);
+    background: linear-gradient(0deg, rgb(13, 114, 82) 0%, rgb(7, 138, 114) 100%);
+    width: 30px;
+    height: 30px;
+}
+
