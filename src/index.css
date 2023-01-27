@@ -1,14 +1,11 @@
 :root {
   --color1: rgb(54, 56, 109);
   --color2: rgb(227, 227, 247);
-  display: flex;
-  flex-direction: column;
-  flex:1;
+  min-height: 80vh;
 }
 
 html{
   height: 100%;
-
 }
 
 

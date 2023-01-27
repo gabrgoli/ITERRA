@@ -11,6 +11,14 @@ import { createAction, createAsyncThunk } from "@reduxjs/toolkit"
         return {payload:darkMode}
     })
 
+    export const ISDRAGGING=createAction('ISDRAGGING',(isDragging)=>{ 
+        return {payload:isDragging}
+    })
+
+    export const UPDATEENTRY=createAction('UPDATEENTRY',(entry)=>{ 
+        return {payload:entry}
+    })
+
 
 
 

@@ -4,5 +4,11 @@
     flex-direction: column;
     flex:1;
     border-radius: 8px;
-    
+    height: 80vh;
+}
+
+.isdragging{
+    opacity: 0.3;
+    border: 1px dashed black;
+    /* transition: all 2s; */
 }

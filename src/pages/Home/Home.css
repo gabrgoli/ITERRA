@@ -1,7 +1,8 @@
 .home-table{
-    display: flex;
-    flex-direction: row;
-    flex:1
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 12px;
+    height: 80vh;
 }
 
 .home-table > div > h1{
