@@ -59,13 +59,17 @@ const rootReducer = createReducer(initialState, (builder) => {
      // let value=entryUpdated(state,action)
       //console.log('value es:',value)
       console.log('action.payload',action.payload[0])
-     state.entries.map((entry) =>{
+      let newArray=state.entries.map((entry) =>{
       if(entry._id === action.payload[0]._id){
-        entry.status = action.payload[0].status
-        state.entries.push(action.payload[0])
+        entry.status=action.payload.status
+        return entry
       }
+      return entry
+      
      })
+      console.log("newArray",newArray)
       //return state.entries
+      state.entries=newArray;
     })
 
 

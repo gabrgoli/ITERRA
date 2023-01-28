@@ -3,6 +3,7 @@
     grid-template-columns: repeat(5,1fr);
     gap: 12px;
     height: 80vh;
+    /* flex:1; */
 }
 
 .home-table > div > h1{
@@ -21,4 +22,5 @@
 .home-table > div{
     display: flex;
     flex-direction: column;
+    flex:1;
 }
