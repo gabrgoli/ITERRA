@@ -1,3 +1,44 @@
+.HomePage{
+    padding: 30px;
+}
+
+.home-userAndButton{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-userAndButton > div {
+    min-width: 110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home-userAndButton > div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70px;
+}
+
+.home-userAndButton > div > div > h1{
+    font-size: 20px;
+    color: var(--color1);
+    font: normal normal normal 17px/21px Outfit;
+    margin: 0;
+}
+
+.home-userAndButton > div > div> h2{
+    font: normal normal bold 17px/21px Outfit;
+    font-size: 20px;
+    min-width: 200px;
+    color: var(--color1);
+    margin: 0;
+}
+
+
+
+
 .home-table{
     display: grid;
     grid-template-columns: repeat(5,1fr);

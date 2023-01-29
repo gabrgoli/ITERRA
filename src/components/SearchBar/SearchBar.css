@@ -23,6 +23,8 @@
     padding: 8px 30px;
     min-width: 300px;
     box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+    /* font: normal normal medium 12px/9px Montserrat; */
+    font-family: Montserrat;
 
 }
 

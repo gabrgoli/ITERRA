@@ -14,34 +14,14 @@ const initialState = {
     tel:'154584024',
     status:'nuevo'
   }
-],
+  ],
   isDragging: false,
   sideMenuOpenClose:false,
   darkMode:false,
 }
 
-
-function entryUpdated(state,action){
-  let array = [];
-  state.entries.map((entry) =>{
-    //console.log('action.payload',action.payload)
-    if(entry._id === action.payload[0]._id){
-      entry._id = action.payload[0]._id;
-      entry.name = action.payload[0].name;
-      entry.tel = action.payload[0].tel;
-      entry.status = action.payload[0].status;
-    }
-    //return entry;
-    
-  })
-  return state.entries;
-}
-
-
 const rootReducer = createReducer(initialState, (builder) => {
   builder
-
-
 
                           ///////////////
                          //  ACCIONES //   
@@ -56,22 +36,15 @@ const rootReducer = createReducer(initialState, (builder) => {
     })
 
     .addCase(actions.UPDATEENTRY, (state, action) => {
-     // let value=entryUpdated(state,action)
-      //console.log('value es:',value)
-      console.log('action.payload',action.payload[0])
-      let newArray=state.entries.map((entry) =>{
+      console.log("action es:",action.payload)
+      state.entries=state.entries.map((entry) =>{
       if(entry._id === action.payload[0]._id){
         entry.status=action.payload.status
         return entry
       }
       return entry
-      
      })
-      console.log("newArray",newArray)
-      //return state.entries
-      state.entries=newArray;
     })
-
 
 })
 export default rootReducer
