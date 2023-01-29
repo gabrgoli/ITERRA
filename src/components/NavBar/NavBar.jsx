@@ -9,7 +9,9 @@ export const NavBar = () => {
     <div className='NavBar'>
         <img src="logo.svg" alt="itierra" />
         <div className='NavBar-SearchBar'><SearchBar/></div>
-        <div>
+        <div className='NavBar-Icons'>
+          <IoLocationSharp/>
+          <IoLocationSharp/>
           <IoLocationSharp/>
           <BsQuestionSquare/>
           <div><FaUserTie/></div>
