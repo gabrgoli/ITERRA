@@ -4,11 +4,13 @@ import { EntryList } from '../../components/EntryList/EntryList'
 import LayoutPrincipal from '../../layoutPrincipal/LayoutPrincipal'
 import './Home.css'
 import { FaUserTie } from "react-icons/fa";
+import { FormNewLead } from '../../components/FormNewLead/FormNewLead'
 const Home = () => {
   return (
     <LayoutPrincipal>
 
         <div className='HomePage'>
+            <FormNewLead/>
             <div className='home-userAndButton'>
                 <div>
                         <FaUserTie/>

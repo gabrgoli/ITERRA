@@ -1,18 +1,21 @@
 import { createReducer } from '@reduxjs/toolkit'
 import * as actions from './actions'
+import { v4 as uuidv4 } from 'uuid';
 
 const initialState = {
   entries:[{
-    _id: '7848584554584',
-    name:'Gabriel',
-    tel:'1544494024',
-    status:'nuevo'
+    _id: uuidv4(),
+    nombre:'Gabriel',
+    telefono:'1544494024',
+    status:'nuevo',
+    email: 'siloni@yahoo.com',
   },
   {
-    _id: '15487665651',
-    name:'Sapo Pepe',
-    tel:'154584024',
-    status:'nuevo'
+    _id: uuidv4(),
+    nombre:'Sapo Pepe',
+    telefono:'154584024',
+    status:'nuevo',
+    email: 'ggoliger@yahoo.com',
   }
   ],
   isDragging: false,
@@ -33,6 +36,10 @@ const rootReducer = createReducer(initialState, (builder) => {
 
     .addCase(actions.ISDRAGGING, (state, action) => {
       state.isDragging=action.payload
+    })
+
+    .addCase(actions.NEWLEAD, (state, action) => {
+      state.entries.push(action.payload)
     })
 
     .addCase(actions.UPDATEENTRY, (state, action) => {

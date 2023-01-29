@@ -19,6 +19,10 @@ import { createAction, createAsyncThunk } from "@reduxjs/toolkit"
         return {payload:entry}
     })
 
+    export const NEWLEAD=createAction('NEWLEAD',(entry)=>{ 
+        return {payload:entry}
+    })
+
 
 
 

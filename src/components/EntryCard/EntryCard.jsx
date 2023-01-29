@@ -39,12 +39,12 @@ export const EntryCard= ({ entry }) => {
         <div className='EntryCard'>
             <div>
                 <h2>Nombre:</h2>
-                <h1>{ entry.name }</h1>
+                <h1>{ entry.nombre }</h1>
             </div>
 
             <div >
                 <h2>Teléfono:</h2>
-                <h1>{ entry.tel }</h1>
+                <h1>{ entry.telefono }</h1>
             </div>
         </div>
     </div>
