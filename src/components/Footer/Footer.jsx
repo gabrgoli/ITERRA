@@ -38,7 +38,7 @@ export const Footer = () => {
       </div>
 
       <div className='Footer-Logo'>
-        <img src="logo.svg" alt="imagen" />
+        <img src="logoFooter.svg" alt="imagen" />
       </div>
 
       <div>

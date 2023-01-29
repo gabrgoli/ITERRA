@@ -51,6 +51,11 @@
     margin: auto;
 }
 
+.Footer-Logo svg{
+    color: red;
+}
+
+
 .Footer-Logo{
     border-bottom: 1.5px solid #7070707E;  
     padding-bottom: 27px;
