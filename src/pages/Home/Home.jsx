@@ -5,12 +5,29 @@ import LayoutPrincipal from '../../layoutPrincipal/LayoutPrincipal'
 import './Home.css'
 import { FaUserTie } from "react-icons/fa";
 import { FormNewLead } from '../../components/FormNewLead/FormNewLead'
+import {BsPlusLg} from "react-icons/bs";
+
 const Home = () => {
   return (
     <LayoutPrincipal>
 
+        <button >
+            <a class="ButtonCreate" href="#popup1">
+            <BsPlusLg/>
+            CREAR LEAD
+            </a>
+        </button>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    <FormNewLead/>
+                </div>
+            </div>
+        </div>
+
         <div className='HomePage'>
-            <FormNewLead/>
             <div className='home-userAndButton'>
                 <div>
                         <FaUserTie/>

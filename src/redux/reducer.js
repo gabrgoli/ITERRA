@@ -3,7 +3,9 @@ import * as actions from './actions'
 import { v4 as uuidv4 } from 'uuid';
 
 const initialState = {
-  entries:[{
+  entries: 
+  JSON.parse(localStorage.getItem("array")) ||
+  [{
     _id: uuidv4(),
     nombre:'Gabriel',
     telefono:'1544494024',
@@ -40,6 +42,7 @@ const rootReducer = createReducer(initialState, (builder) => {
 
     .addCase(actions.NEWLEAD, (state, action) => {
       state.entries.push(action.payload)
+      localStorage.setItem("array", JSON.stringify(state.entries));
     })
 
     .addCase(actions.UPDATEENTRY, (state, action) => {
@@ -51,6 +54,7 @@ const rootReducer = createReducer(initialState, (builder) => {
       }
       return entry
      })
+     localStorage.setItem("array", JSON.stringify(state.entries));
     })
 
 })

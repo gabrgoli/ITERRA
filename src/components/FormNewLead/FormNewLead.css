@@ -35,6 +35,7 @@
 .ButtonForm{
     justify-content: center;
     width: 304px;
+    margin-top: 40px;
 }
 
 
@@ -51,6 +52,8 @@
 
   .form__group input{
     width: 100%;
+    font: normal normal 600 18px/23px Outfit;
+    color: #2F0240;
   }
 
   .form__field {

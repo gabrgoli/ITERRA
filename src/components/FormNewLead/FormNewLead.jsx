@@ -1,7 +1,7 @@
 import React from 'react'
 import './FormNewLead.css'
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 //import { uuid } from 'uuidv4';
 import { v4 as uuidv4 } from 'uuid';
 import {  NEWLEAD } from '../../redux/actions'
@@ -9,39 +9,39 @@ import {  NEWLEAD } from '../../redux/actions'
 
 export const FormNewLead = () => {
 
-const dispatch=useDispatch()
-    
-const[input,setInput]=useState({})
-let [errors, setErrors] = useState({}) 
-const [loader,setLoader] = useState(false)
-
-//FUNTION SUBMIT
-function submit(){
-    input._id=uuidv4();
-    input.status='nuevo';
-    dispatch(NEWLEAD(input))
-    setInput({})
-    setLoader(false);
-    console.log("envio completo",input);
-}
-  
-
-//FUNTION HANDLECHANGE
-const handleChanchge=async (ev)=>{
-    setInput((input)=>({...input,[ev.target.name]:ev.target.value}))
-    setErrors((errors)=>({...errors,[ev.target.name]:""}))
-}
-
-//FUNCTION HANDLESUBMIT
-const handleSubmit= async(e)=>{
-    e.preventDefault();
-    errors=getErrors(input)
-    setErrors(getErrors(input))
-    Object.entries(errors).length !== 0?
-        console.log("Show errors:",errors)
-        :
-        submit()
+    const dispatch=useDispatch()
         
+    const[input,setInput]=useState({})
+    let [errors, setErrors] = useState({}) 
+    const [loader,setLoader] = useState(false)
+        
+    //FUNTION SUBMIT
+    function submit(){
+        input._id=uuidv4();
+        input.status='nuevo';
+        dispatch(NEWLEAD(input))
+        setInput({})
+        setLoader(false);
+        console.log("envio completo",input);
+    }
+    
+
+    //FUNTION HANDLECHANGE
+    const handleChanchge=async (ev)=>{
+        setInput((input)=>({...input,[ev.target.name]:ev.target.value}))
+        setErrors((errors)=>({...errors,[ev.target.name]:""}))
+    }
+
+    //FUNCTION HANDLESUBMIT
+    const handleSubmit= async(e)=>{
+        e.preventDefault();
+        errors=getErrors(input)
+        setErrors(getErrors(input))
+        Object.entries(errors).length !== 0?
+            console.log("Show errors:",errors)
+            :
+            submit()
+            
 }
 
 
@@ -51,7 +51,7 @@ const handleSubmit= async(e)=>{
         <form className='FormNewLead' onSubmit={(e) => handleSubmit(e)}>
             <h1>NUEVO LEAD</h1>
             <h2>Lorem ipsum dolor sit amet</h2>
-            <input type="text" name="email" onChange={(e) => handleChanchge(e)} placeholder="Your Wallet Adress" value={input.walletAdress?input.walletAdress:""} ></input>
+
             <div1 className="form__group">
                 <input type="input" className="form__field" onChange={(e) => handleChanchge(e)} placeholder="Nombre" name="nombre" id='nombre' value={input.nombre} required />
                 <label className="form__label">Nombre</label>
