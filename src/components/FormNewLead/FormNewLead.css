@@ -10,7 +10,9 @@
     align-items: center;
     border: 1px solid black;
     border-radius: 30px;
-    padding: 60px;
+    padding: 70px;
+    background: #fff;
+
 }
 
 .FormNewLead h1{
@@ -35,35 +37,47 @@
 .ButtonForm{
     justify-content: center;
     width: 304px;
+    height: 50px;
     margin-top: 40px;
+    font: normal normal 600 19px/20px Outfit;
 }
 
 
 .Form-Tel-Email{
     display: flex;
+    flex-direction: row;
     width: 100%;
+}
+
+.Form-Tel-Email > .form__group:first-child{
+  margin-right: 16px;
 }
 
 .form__group {
     position: relative;
     width: 100%;
     margin-top:30px;
+    height: 66.8px;
+    
   }
 
   .form__group input{
+    box-sizing: border-box;
     width: 100%;
     font: normal normal 600 18px/23px Outfit;
     color: #2F0240;
+    /* padding: 28px 10px; */
+    padding: 28px 10px 12px 10px;
   }
 
   .form__field {
-    font-family: inherit;
-    width: 100%;
-    border: 0;
+    box-sizing: border-box;
+    /* font-family: inherit; */
+    /* width: 100%; */
     border: 2px solid #9b9b9b;
     outline: 0;
-    font-size: 1.3rem;
-    padding: 28px;
+    /* font-size: 1.3rem; */
+ 
     background: transparent;
     transition: border-color 0.2s;
     border-radius: 10px;
@@ -81,7 +95,7 @@
   .form__label {
     position: absolute;
     /* display: block; */
-    transition: 0.1s;
+    transition: 0.05s;
     font-size: 1rem;
     color: #9b9b9b;
   }
