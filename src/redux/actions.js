@@ -1,15 +1,13 @@
+import axios from "axios"
 import { createAction, createAsyncThunk } from "@reduxjs/toolkit"
+export const api='http://localhost:3001/entrys'
 
 
                         /////////////////////////////////////   
                         //             ACCIONES            //   
                         ///////////////////////////////////// 
 
-    
 
-    export const DARKMODE=createAction('DARKMODE',(darkMode)=>{ 
-        return {payload:darkMode}
-    })
 
     export const ISDRAGGING=createAction('ISDRAGGING',(isDragging)=>{ 
         return {payload:isDragging}
@@ -23,17 +21,8 @@ import { createAction, createAsyncThunk } from "@reduxjs/toolkit"
         return {payload:entry}
     })
 
+    export const GETENTRIES = createAsyncThunk('GETENTRIES', async () => { 
+        const response = await axios(`${api}`)
+        return response.data
+    })
 
-
-
-    // export const SEARCHOFFERSBYCATEGORY = createAsyncThunk('SEARCHOFFERSBYCATEGORY', async (input) => { 
-    //     //const response = await axios.post(`${api}/offers/getoffersbycategory/?category=${input.category}`)
-    //     const response = await axios.post(`${api}/offers/getoffersbycategory`,input)
-        
-    //     return response.data.map((offer)=>({
-    //         ...offer,
-    //         images:['https://www.wimacpc.com/assets/images/no-disponible.png'],
-    //         price: 3570,
-    //         discount:10
-    //     }))
-    // })  

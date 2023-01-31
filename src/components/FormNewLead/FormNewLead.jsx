@@ -23,6 +23,7 @@ export const FormNewLead = () => {
         setInput({})
         setLoader(false);
         console.log("envio completo",input);
+        window.location.reload(false);
     }
     
 
@@ -38,7 +39,7 @@ export const FormNewLead = () => {
         errors=getErrors(input)
         setErrors(getErrors(input))
         Object.entries(errors).length !== 0?
-            console.log("Show errors:",errors)
+            alert("hay errores",errors)
             :
             submit()
             

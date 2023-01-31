@@ -6,22 +6,33 @@ import './Home.css'
 import { FaUserTie } from "react-icons/fa";
 import { FormNewLead } from '../../components/FormNewLead/FormNewLead'
 import {BsPlusLg} from "react-icons/bs";
+import { useDispatch, useSelector } from 'react-redux'
+import { GETENTRIES } from '../../redux/actions'
 
 const Home = () => {
+
+    const dispatch=useDispatch()
+
+    let entries=useSelector((state)=>state.rootReducer.entries)
+    React.useEffect(()=>{
+        if(!entries[0])dispatch(GETENTRIES())
+    },[])
+
+
   return (
     <LayoutPrincipal>
 
         <button >
-            <a class="ButtonCreate" href="#popup1">
+            <a className="ButtonCreate" href="#popup1">
             <BsPlusLg/>
             CREAR LEAD
             </a>
         </button>
 
-        <div id="popup1" class="overlay">
-            <div class="popup">
-                <a class="close" href="#">&times;</a>
-                <div class="content">
+        <div id="popup1" className="overlay">
+            <div className="popup">
+                <a className="close" href="#">&times;</a>
+                <div className="content">
                     <FormNewLead/>
                 </div>
             </div>

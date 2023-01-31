@@ -5,6 +5,7 @@
     /* flex:1; */
     border-radius: 8px;
     height: 80vh;
+    padding: 11px 9px;
 }
 
 .isdragging{
