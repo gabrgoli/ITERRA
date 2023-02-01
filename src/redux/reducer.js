@@ -39,6 +39,16 @@ const rootReducer = createReducer(initialState, (builder) => {
       state.entries=action.payload
     })
 
+    .addCase(actions.NEWENTRY.fulfilled, (state, action) => {
+      state.entries=[]
+      state.entries=action.payload
+    })
+
+    .addCase(actions.STATEENTRY.fulfilled, (state, action) => {
+      state.entries=[]
+      state.entries=action.payload
+    })
+
     // .addCase(actions.NEWLEAD, (state, action) => {
     //   state.entries.push(action.payload)
     //   localStorage.setItem("array", JSON.stringify(state.entries));

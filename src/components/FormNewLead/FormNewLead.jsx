@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux'
 //import { uuid } from 'uuidv4';
 import { v4 as uuidv4 } from 'uuid';
-import {  NEWLEAD } from '../../redux/actions'
+import {  NEWENTRY } from '../../redux/actions'
 
 
 export const FormNewLead = () => {
@@ -19,7 +19,8 @@ export const FormNewLead = () => {
     function submit(){
         input._id=uuidv4();
         input.status='nuevo';
-        dispatch(NEWLEAD(input))
+        //dispatch(NEWLEAD(input))
+        dispatch(NEWENTRY(input))
         setInput({})
         setLoader(false);
         console.log("envio completo",input);

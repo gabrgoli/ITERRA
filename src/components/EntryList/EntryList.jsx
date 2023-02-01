@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { EntryCard } from '../EntryCard/EntryCard';
 import './EntryList.css'
-import { ISDRAGGING ,UPDATEENTRY } from '../../redux/actions'
+import { ISDRAGGING ,STATEENTRY } from '../../redux/actions'
 
 export const EntryList = ({ status }) => {
 
@@ -29,9 +29,12 @@ export const EntryList = ({ status }) => {
        //console.log('isDragging no: ',isDragging)
         const entry = entries.filter( e => e._id === id );
         console.log('entry es1:',entry);
-        entry.status = status;
-        console.log('entry es2:',entry);
-        dispatch( UPDATEENTRY(entry) );
+        let input = {}
+        input.status = status;
+        input._id=id;
+        console.log('input es2:',input);
+        //dispatch( UPDATEENTRY(entry) );
+        dispatch( STATEENTRY(input) );
     }
 
       

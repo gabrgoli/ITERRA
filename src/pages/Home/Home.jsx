@@ -22,12 +22,7 @@ const Home = () => {
   return (
     <LayoutPrincipal>
 
-        <button >
-            <a className="ButtonCreate" href="#popup1">
-            <BsPlusLg/>
-            CREAR LEAD
-            </a>
-        </button>
+
 
         <div id="popup1" className="overlay">
             <div className="popup">
@@ -47,7 +42,9 @@ const Home = () => {
                         <h2>Fernando Sánchez</h2>
                     </div>
                 </div>
-                <ButtonCreate/>
+                <a className='link'  href="#popup1">
+                    <ButtonCreate/>
+                </a>
             </div>
             <div className='home-table'>
                 <div>
